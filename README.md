@@ -5,3 +5,11 @@
 ## 1.分割字符串
 
 ![分割字符串](https://github.com/iOSCoderMaster/PythonToolBox/blob/master/分割字符串/desc.png)
+
+## 2.修改文件md5
+
+
+```
+给文件增加内容以修改md5,增加的内容可自定义
+```
+![给文件增加内容修改md5](https://github.com/iOSCoderMaster/PythonToolBox/blob/master/给文件增加内容修改md5/desc.png)
