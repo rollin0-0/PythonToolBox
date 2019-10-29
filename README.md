@@ -13,3 +13,12 @@
 给文件增加内容以修改md5,增加的内容可自定义
 ```
 ![给文件增加内容修改md5](https://github.com/iOSCoderMaster/PythonToolBox/blob/master/给文件增加内容修改md5/desc.png)
+
+
+## 3.XcodeprojModify
+
+```
+修改xcodeproj文件中的udid
+```
+
+![Desc](https://github.com/iOSCoderMaster/PythonToolBox/blob/master/XcodeprojModify/desc.png)
