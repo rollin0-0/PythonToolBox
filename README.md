@@ -21,6 +21,11 @@
 修改xcodeproj文件中的udid
 ```
 
+需要安装依赖:
+```
+pip3 install future
+```
+
 macOS 10.15系统 需要在终端执行以下命令后方可使用
 ```
 sudo spctl --master-disable
