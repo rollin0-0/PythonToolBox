@@ -21,4 +21,9 @@
 修改xcodeproj文件中的udid
 ```
 
+macOS 10.15系统 需要在终端执行以下命令后方可使用
+```
+sudo spctl --master-disable
+```
+
 ![Desc](https://github.com/iOSCoderMaster/PythonToolBox/blob/master/XcodeprojModify/desc.png)
