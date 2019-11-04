@@ -31,4 +31,5 @@ macOS 10.15系统 需要在终端执行以下命令后方可使用
 sudo spctl --master-disable
 ```
 
+使用方式见XcodeprojModify文件夹下的图片desc.png
 ![Desc](https://github.com/iOSCoderMaster/PythonToolBox/blob/master/XcodeprojModify/desc.png)
