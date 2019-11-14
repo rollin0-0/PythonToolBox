@@ -26,6 +26,10 @@
 修改xcodeproj文件中的udid
 ```
 
+```
+需要Python 3.7.4
+```
+
 需要安装依赖:
 ```
 pip3 install future
