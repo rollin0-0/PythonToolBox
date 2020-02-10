@@ -42,4 +42,4 @@ sudo spctl --master-disable
 
 使用方式见XcodeprojModify文件夹下的图片desc.png
 
-![Desc](https://github.com/iOSCoderMaster/PythonToolBox/blob/master/XcodeprojModify/desc.png)
+![desc.png](https://i.loli.net/2020/02/10/a2lvBPwysgZUc8W.png)
