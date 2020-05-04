@@ -4,7 +4,7 @@
 # 广告一波
 我的另外一个仓库,求star
 
-[iOS代码混淆工具](https://github.com/iOSCoderMaster/iOSCodeDifferHelper)
+[iOS代码混淆工具](https://github.com/iOSCoda/DiffHelper)
 
 
 ## 1.分割字符串
@@ -45,3 +45,6 @@ sudo spctl --master-disable
 使用方式见XcodeprojModify文件夹下的图片desc.png
 
 ![desc.png](https://i.loli.net/2020/02/10/a2lvBPwysgZUc8W.png)
+
+## RemoveUnityUIWebView
+移除Unity的UIWebView
