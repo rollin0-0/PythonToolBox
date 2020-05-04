@@ -46,5 +46,5 @@ sudo spctl --master-disable
 
 ![desc.png](https://i.loli.net/2020/02/10/a2lvBPwysgZUc8W.png)
 
-## RemoveUnityUIWebView
-移除Unity的UIWebView
+## 4.RemoveUnityUIWebView
+移除Unity中libiPhone-lib.a的UIWebView
