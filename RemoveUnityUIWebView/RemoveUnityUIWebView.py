@@ -88,11 +88,14 @@ def createURLUtilityO(arch, URLUtilityOPath):
 
 
 # 切割框架
-def splitArches(arch, targetArchPath):
+def splitArches(arch, archList, targetArchPath):
     libName = os.path.basename(targetArchPath)
     colorPrint("----------开始生成:%s" % (libName))
     libiPhone_libPath = get_libiPhone_libPath()
-    os.system("lipo %s -thin %s -output %s" % (libiPhone_libPath, arch, targetArchPath))
+    if len(archList) > 1:
+        os.system("lipo %s -thin %s -output %s" % (libiPhone_libPath, arch, targetArchPath))
+    else:
+        shutil.copy(libiPhone_libPath, targetArchPath)
     colorPrint("----------结束生成:%s" % (libName))
 
 
@@ -105,14 +108,19 @@ def deleteAndInsert(arch):
     os.system("ar -d %s URLUtility.o" % (libPath))
 
     colorPrint("----------插入新的URLUtility.o")
-    os.system("ar -q %s %s" % (libPath, oObjetPath))
+    command = "ar -q %s %s" % (libPath, oObjetPath)
+    os.system(command)
 
 
 # 合并更新后的.a
-def mergeLib(archPath):
+def mergeLib(archList, archPath):
     outputLibPath = os.path.join(parPath, kNewLibName)
-    command = "lipo -create %s -output %s " % (archPath, outputLibPath)
-    os.system(command)
+    if len(archList) > 1:
+        command = "lipo -create %s -output %s " % (archPath, outputLibPath)
+        os.system(command)
+    else:
+        archPath = archPath.strip()
+        shutil.copy(archPath, outputLibPath)
     colorPrint("")
     colorPrint("----------生成的新的libiPhone为:")
     colorPrint(outputLibPath)
@@ -137,7 +145,7 @@ if __name__ == "__main__":
         targetLibPath = getTargetLibPath(arch)
 
         # 生成对应的armvx.a
-        splitArches(arch, targetLibPath)
+        splitArches(arch, archList, targetLibPath)
 
         # 删除原本的URLUtility.O,插入上面生成的URLUtility.O
         deleteAndInsert(arch)
@@ -146,7 +154,7 @@ if __name__ == "__main__":
         archesString += targetLibPath + " "
 
     # 生成新的多框架二进制
-    mergeLib(archesString)
+    mergeLib(archList, archesString)
 
     # 清理临时文件
     for arch in archList:
