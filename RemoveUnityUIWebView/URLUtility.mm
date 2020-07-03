@@ -26,7 +26,7 @@ void OpenURL(core::basic_string<char,core::StringStorageDefault<char> >const &ar
 }
 
 
-void OpenURL(std::string const&arg){
+void OpenURL(std::string const &arg){
     UIApplication *app = [UIApplication sharedApplication];
     NSString *urlStr = [NSString stringWithUTF8String:arg.c_str()];
     NSURL *url = [NSURL URLWithString:urlStr];
